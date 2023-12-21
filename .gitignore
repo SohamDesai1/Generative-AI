@@ -3,3 +3,4 @@ venv
 models
 bot.py
 ingest.py
+.env
