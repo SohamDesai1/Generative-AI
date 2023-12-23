@@ -12,14 +12,20 @@ model_text = genai.GenerativeModel('gemini-pro')
 model_image = genai.GenerativeModel('gemini-pro-vision')
 
 def generate_text(prompt):
-    response = model_text.generate_content(prompt)
-    return response.text
+    # response = model_text.generate_content(prompt)
+    chat = model_text.start_chat(history=[])
+    chat.send_message(prompt)
+    for message in chat.history:
+        res = f'**{message.role}**: {message.parts[0].text}'
+        print(res)
+    return res 
+    
 
 def generate_image(prompt):
     response = model_image.generate_content(prompt)
     return response.text
 
-st.title('Gemini AI Text Generator')
+st.title('Gemini AI ')
 
 text,image = st.tabs(['Text','Image'])
 
@@ -31,6 +37,8 @@ with text:
         
 with image: 
     image = st.file_uploader(label='Upload an image',type=['jpg', 'jpeg', 'png'])
+    if image:
+        st.image(image,width=500)
     if st.button('Generate Text from Image'):
         img = PIL.Image.open(image)
         response = generate_image(img)
