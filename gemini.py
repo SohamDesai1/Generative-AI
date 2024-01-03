@@ -25,7 +25,7 @@ def generate_image(prompt):
     response = model_image.generate_content(prompt)
     return response.text
 
-st.title('Gemini AI ')
+st.title('Gemini Pro AI ')
 
 text,image = st.tabs(['Text','Image'])
 
