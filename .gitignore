@@ -4,3 +4,4 @@ models
 bot.py
 ingest.py
 .env
+faiss_index
