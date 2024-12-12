@@ -21,3 +21,4 @@ groq
 langchain_community
 langchain_core
 pandasai
+mesop
