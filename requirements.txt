@@ -1,7 +1,6 @@
 streamlit
 langchain
 PyPDF2
-python-pptx
 fastapi
 uvicorn
 requests
@@ -22,5 +21,4 @@ langchain_community
 langchain_core
 pandasai
 mesop
-dotenv
 openai
