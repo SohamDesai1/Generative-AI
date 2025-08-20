@@ -1,0 +1,20 @@
+{
+	"servers": {
+		"Finance": {
+			"type": "stdio",
+			"command": "/home/sohamdesai/Coding/AI_ML/GEN_AI/MCP/.venv/bin/python3.12",
+			"args": [
+				"/home/sohamdesai/Coding/AI_ML/GEN_AI/MCP/main.py"
+			],
+		},
+		"postgres": {
+			"command": "npx",
+			"args": [
+				"-y",
+				"@modelcontextprotocol/server-postgres",
+				"<POSTGRES_URL>"
+			]
+		}
+	},
+	"inputs": []
+}

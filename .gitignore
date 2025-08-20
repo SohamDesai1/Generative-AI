@@ -6,3 +6,4 @@ ingest.py
 .env
 faiss_index
 demo.*
+.venv
